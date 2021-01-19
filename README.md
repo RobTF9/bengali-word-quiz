@@ -1,5 +1,5 @@
-# ts-app
-Simple starter for building webapps with React and TypeScript
+# bengali-word-quiz
+A simple vocabulary game for the Bengali language.
 
 ## Set up
 You'll need Node and Yarn installed. I use [**volta**](https://volta.sh/).
