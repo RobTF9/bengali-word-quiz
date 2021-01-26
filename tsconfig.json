@@ -15,6 +15,7 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "stripInternal": true,
+    "lib": ["DOM", "ES2019"],
     "types": [],
     "baseUrl": "."
   },
