@@ -1,10 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 
-interface Props {
-  words: string[][];
-}
-
-const WordList = ({ words }: Props): JSX.Element => {
+const WordList = ({ words }) => {
   return (
     <ul>
       {words.map((word) => (

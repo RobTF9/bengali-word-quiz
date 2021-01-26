@@ -1,13 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 import SpeechRecognition, {
   useSpeechRecognition,
 } from 'react-speech-recognition';
 
-interface Props {
-  word: string;
-}
-
-const Listener = ({ word }: Props): JSX.Element => {
+const Listener = ({ word }) => {
   const [correct, setCorrect] = React.useState(false);
 
   const { listening } = useSpeechRecognition({
