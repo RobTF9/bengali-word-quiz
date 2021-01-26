@@ -1,9 +1,10 @@
 import * as React from 'react';
 import 'regenerator-runtime/runtime';
-import Listener from './components/Listener';
+import WordList from './components/WordList';
+import words from './data/words';
 
 const App = (): JSX.Element => {
-  return <Listener {...{ word: 'word' }} />;
+  return <WordList {...{ words }} />;
 };
 
 export default App;

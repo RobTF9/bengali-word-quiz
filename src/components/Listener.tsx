@@ -9,6 +9,7 @@ interface Props {
 
 const Listener = ({ word }: Props): JSX.Element => {
   const [correct, setCorrect] = React.useState(false);
+
   const { listening } = useSpeechRecognition({
     commands: [
       {
@@ -22,7 +23,7 @@ const Listener = ({ word }: Props): JSX.Element => {
 
   React.useEffect(() => {
     if (!listening && !correct) {
-      void SpeechRecognition.startListening();
+      void SpeechRecognition.startListening({ language: 'bn' });
     } else if (correct) {
       void SpeechRecognition.stopListening();
     }
