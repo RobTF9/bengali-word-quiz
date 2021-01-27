@@ -15,7 +15,8 @@ export default [
   ['মেঘ', 'Megh', 'Cloudy'],
   ['সেঁতসেঁতে', 'Shetshyate', 'Humid'],
   ['ঘাম', 'Gham', 'Sweaty'],
-  ['পড়তাছে', 'Portase', 'Falling'],
+  ['হইতাছে', 'Portase', 'Falling'],
+  ['পড়তাছে', 'Hoitase', 'Happening'],
   ['অল্প', 'Olpo', 'A little'],
   ['হালকা', 'Halka', 'Light (weather)'],
 ];

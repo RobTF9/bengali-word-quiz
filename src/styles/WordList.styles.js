@@ -1,12 +1,19 @@
 import styled, { css } from 'styled-components';
 
 export const WordListWrapper = styled.ul`
+  margin: 8rem auto 24rem;
+  width: 80%;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 8rem;
+  }
+`;
+
+export const WordListGrid = styled.div`
   display: grid;
   gap: 4rem;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  margin: 0 auto;
-  width: 80%;
-  text-align: center;
 `;
 
 export const WordListItem = styled.li`
@@ -25,5 +32,12 @@ export const WordListItem = styled.li`
     inactive &&
     css`
       opacity: 0.4;
+    `}
+
+    ${({ answered }) =>
+    answered &&
+    css`
+      background-color: green;
+      color: white;
     `}
 `;

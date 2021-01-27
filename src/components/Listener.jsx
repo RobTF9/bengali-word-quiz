@@ -14,7 +14,7 @@ const Listener = () => {
   const { pathname } = useLocation();
   const history = useHistory();
 
-  const { words } = React.useContext(WordContext);
+  const { words, correctAnswer } = React.useContext(WordContext);
 
   const word =
     words.length > 1
@@ -40,10 +40,11 @@ const Listener = () => {
 
   React.useEffect(() => {
     if (!listening && !correct) {
-      void SpeechRecognition.startListening({ language: 'bn-BD' });
+      SpeechRecognition.startListening({ language: 'bn-BD' });
       setAttempts(attempts + 1);
     } else if (correct) {
-      void SpeechRecognition.stopListening();
+      correctAnswer(word);
+      SpeechRecognition.stopListening();
       setTimeout(() => history.push('/'), 2000);
     }
   }, [listening, correct]);

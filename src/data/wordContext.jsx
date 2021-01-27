@@ -53,8 +53,16 @@ export const WordProvider = ({ children }) => {
     setWords(newArray);
   }, [config]);
 
+  const [correct, setCorrect] = React.useState([]);
+
+  const correctAnswer = (answer) => {
+    setCorrect([...correct, answer]);
+  };
+
   return (
-    <WordContext.Provider value={{ words, config, setConfig }}>
+    <WordContext.Provider
+      value={{ words, config, setConfig, correctAnswer, correct }}
+    >
       {children}
     </WordContext.Provider>
   );
