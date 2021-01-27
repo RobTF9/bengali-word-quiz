@@ -19,16 +19,15 @@ const WordList = () => {
       <h1>Click on a word, then say it in Bengali</h1>
       <WordListGrid>
         {words.map((w) => (
-          <Link to={w[2]} key={w[2]}>
-            <WordItem
-              {...{
-                word: w,
-                answered: correct.find((c) => c === w) ? true : false,
-                active: pathname !== '/' && w[2] === path,
-                inactive: pathname !== '/' && w[2] !== path,
-              }}
-            />
-          </Link>
+          <WordItem
+            {...{
+              key: w[2],
+              word: w,
+              answered: correct.find((c) => c === w) ? true : false,
+              active: pathname !== '/' && w[2] === path,
+              inactive: pathname !== '/' && w[2] !== path,
+            }}
+          />
         ))}
       </WordListGrid>
     </WordListWrapper>
@@ -39,9 +38,11 @@ const WordItem = ({ answered, word, active, inactive }) => {
   const [bengali, pronounciation, english] = word;
   return (
     <WordListItem {...{ answered, active, inactive }}>
-      {english.replace(/-/g, ' ')}
-      {answered && ` / ${pronounciation} / ${bengali}`}
-      {answered && <FiCheckCircle />}
+      <Link to={english}>
+        {english.replace(/-/g, ' ')}
+        {answered && ` / ${pronounciation} / ${bengali}`}
+        {answered && <FiCheckCircle />}
+      </Link>
     </WordListItem>
   );
 };

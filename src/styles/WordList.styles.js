@@ -44,13 +44,18 @@ export const WordListItem = styled.li`
   box-shadow: inset 0 -0.4rem rgba(0, 0, 0, 0.2),
     inset 0 0.2rem 0.2rem 0 rgba(255, 255, 255, 0.4);
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
   min-height: 10rem;
   border-radius: 1rem;
   transition: all 0.3s ease-in-out;
+
+  a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
 
   svg {
     stroke: white;
