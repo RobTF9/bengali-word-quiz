@@ -27,6 +27,7 @@ const Reset = createGlobalStyle`
   /* Set base as ten so rem units have a standardised base point */
   html {
     font-size: 10px;
+    background-color: darkgreen
   }
 
   ol,

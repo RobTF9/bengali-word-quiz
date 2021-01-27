@@ -76,7 +76,6 @@ export const WordListItem = styled.li`
   ${({ inactive }) =>
     inactive &&
     css`
-      opacity: 0.4;
       pointer-events: none !important;
     `}
 
