@@ -1,5 +1,5 @@
 export default [
-  ['পাশেই', 'Pashei', 'Next to'],
+  ['পাশেই', 'Pashei', 'Next-to'],
   ['লাল', 'Laal', 'Red'],
   ['কালো', 'Kalo', 'Black'],
   ['হলুদ', 'Holud', 'Yellow'],
@@ -17,6 +17,6 @@ export default [
   ['ঘাম', 'Gham', 'Sweaty'],
   ['হইতাছে', 'Portase', 'Falling'],
   ['পড়তাছে', 'Hoitase', 'Happening'],
-  ['অল্প', 'Olpo', 'A little'],
-  ['হালকা', 'Halka', 'Light (weather)'],
+  ['অল্প', 'Olpo', 'A-little'],
+  ['হালকা', 'Halka', 'Light-(weather)'],
 ];

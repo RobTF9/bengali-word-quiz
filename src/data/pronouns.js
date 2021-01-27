@@ -3,6 +3,6 @@ export default [
   ['আমার', 'Amar', 'My'],
   ['তুমি', 'Tumi', 'You'],
   ['তোমার', 'Tumar', 'Your'],
-  ['আপনি', 'Apni', 'You (Formal)'],
-  ['আপনার', 'Apnar', 'Your (Formal)'],
+  ['আপনি', 'Apni', 'You-(Formal)'],
+  ['আপনার', 'Apnar', 'Your-(Formal)'],
 ];

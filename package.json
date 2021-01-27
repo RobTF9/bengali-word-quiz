@@ -16,6 +16,7 @@
     "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
     "eslint": "^7.16.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-prettier": "^3.3.0",
@@ -30,6 +31,7 @@
     "yarn": "1.22.10"
   },
   "dependencies": {
+    "framer-motion": "^3.2.2-rc.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",

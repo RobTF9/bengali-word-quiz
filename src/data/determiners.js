@@ -1,1 +1,1 @@
-export default [['কোনটি', 'Konta', 'Which one']];
+export default [['কোনটি', 'Konta', 'Which-one']];

@@ -38,7 +38,7 @@ const WordItem = ({ answered, word, active, inactive }) => {
   const [bengali, pronounciation, english] = word;
   return (
     <WordListItem {...{ answered, active, inactive }}>
-      {english}
+      {english.replace(/-/g, ' ')}
       {answered && ` / ${pronounciation} / ${bengali}`}
     </WordListItem>
   );

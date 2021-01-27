@@ -33,7 +33,7 @@ const Listener = () => {
         callback: () => setCorrect(true),
         matchInterim: true,
         isFuzzyMatch: true,
-        fuzzyMatchingThreshold: 0.2,
+        fuzzyMatchingThreshold: 0.4,
       },
     ],
   });
@@ -55,7 +55,26 @@ const Listener = () => {
         <TranscriptDebugger>
           Transcript: {transcript}
         </TranscriptDebugger>
-        <ListenerWrapper>
+        <ListenerWrapper
+          {...{
+            layout: true,
+            initial: {
+              height: 0,
+              opacity: 0,
+            },
+            animate: {
+              height: 'auto',
+              opacity: 1,
+            },
+            exit: {
+              height: 0,
+              opacity: 0,
+            },
+            transition: {
+              stiffness: 300,
+            },
+          }}
+        >
           <ListenerInner>
             <h1>
               {correct ? 'Well done!' : `Can you say ${bengali} ?`}

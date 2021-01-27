@@ -1,7 +1,8 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-export const ListenerWrapper = styled.div`
-  background-color: white;
+export const ListenerWrapper = styled(motion.div)`
+  background-color: red;
   bottom: 0;
   box-shadow: 0 -1rem 2rem rgba(0, 0, 0, 0.2);
   padding: 8rem 0;
@@ -15,6 +16,10 @@ export const ListenerInner = styled.div`
   position: relative;
   text-align: center;
   width: 80%;
+
+  * {
+    color: white;
+  }
 `;
 
 export const TranscriptDebugger = styled.div`
@@ -25,4 +30,5 @@ export const TranscriptDebugger = styled.div`
   position: fixed;
   right: 0;
   top: 0;
+  z-index: 10;
 `;
