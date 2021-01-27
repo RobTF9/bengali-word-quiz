@@ -1,4 +1,5 @@
 import React from 'react';
+import shuffle from '../utils/shuffle';
 import adjectives from './adjectives';
 import adverbs from './adverbs';
 import conjunctions from './conjunction';
@@ -50,6 +51,7 @@ export const WordProvider = ({ children }) => {
     if (config.verbs) {
       newArray = [...newArray, ...verbs];
     }
+    newArray = shuffle(newArray);
     setWords(newArray);
   }, [config]);
 
