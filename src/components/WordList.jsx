@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import WordContext from '../data/wordContext';
 import {
   WordListItem,
   WordListWrapper,
 } from '../styles/WordList.styles';
 
-const WordList = ({ words }) => {
+const WordList = () => {
   const { pathname } = useLocation();
-
+  const { words } = React.useContext(WordContext);
   return (
     <WordListWrapper>
       {words.map((w) => (

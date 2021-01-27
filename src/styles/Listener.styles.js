@@ -4,7 +4,7 @@ export const ListenerWrapper = styled.div`
   background-color: white;
   bottom: 0;
   box-shadow: 0 -1rem 2rem rgba(0, 0, 0, 0.2);
-  padding: 2rem;
+  padding: 8rem 0;
   position: fixed;
   width: 100vw;
   z-index: 2;

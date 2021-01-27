@@ -3,7 +3,7 @@ import { Redirect, useHistory, useLocation } from 'react-router-dom';
 import SpeechRecognition, {
   useSpeechRecognition,
 } from 'react-speech-recognition';
-import words from '../data/words';
+import WordContext from '../data/wordContext';
 import {
   ListenerInner,
   ListenerWrapper,
@@ -13,9 +13,15 @@ import {
 const Listener = () => {
   const { pathname } = useLocation();
   const history = useHistory();
-  const [bengali, pronounciation, english] = words.find(
-    (w) => w[2] === pathname.substring(1),
-  );
+
+  const { words } = React.useContext(WordContext);
+
+  const word =
+    words.length > 1
+      ? words.find((w) => w[2] === pathname.substring(1))
+      : ['', '', ''];
+
+  const [bengali, pronounciation] = word;
 
   const [correct, setCorrect] = React.useState(false);
   const [attempts, setAttempts] = React.useState(0);
@@ -43,19 +49,21 @@ const Listener = () => {
   }, [listening, correct]);
 
   return (
-    <>
-      <TranscriptDebugger>
-        Transcript: {transcript}
-      </TranscriptDebugger>
-      <ListenerWrapper>
-        <ListenerInner>
-          <h1>
-            {correct ? 'Well done!' : `Can you say ${bengali} ?`}
-          </h1>
-          {attempts > 3 && <p>It's pronounced {pronounciation}</p>}
-        </ListenerInner>
-      </ListenerWrapper>
-    </>
+    word && (
+      <>
+        <TranscriptDebugger>
+          Transcript: {transcript}
+        </TranscriptDebugger>
+        <ListenerWrapper>
+          <ListenerInner>
+            <h1>
+              {correct ? 'Well done!' : `Can you say ${bengali} ?`}
+            </h1>
+            {attempts > 3 && <p>It's pronounced {pronounciation}</p>}
+          </ListenerInner>
+        </ListenerWrapper>
+      </>
+    )
   );
 };
 
