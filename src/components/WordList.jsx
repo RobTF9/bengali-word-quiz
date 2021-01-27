@@ -18,6 +18,10 @@ const WordList = () => {
   return (
     <WordListWrapper>
       <h1>Click on a word, then say it in Bengali</h1>
+      <h4>
+        <span>Your current progress:</span>{' '}
+        {correct.length / 2 + ' / ' + words.length}
+      </h4>
       <WordListGrid>
         {pathname !== '/' && <ListenerOverlay to="/" />}
         {words.map((w) => (

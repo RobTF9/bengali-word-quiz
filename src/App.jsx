@@ -2,6 +2,7 @@ import { AnimatePresence } from 'framer-motion';
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import 'regenerator-runtime/runtime';
+import Footer from './components/Footer';
 import Listener from './components/Listener';
 import Menu from './components/Menu';
 import WordList from './components/WordList';
@@ -16,7 +17,6 @@ const App = () => {
       <Typography />
       <WordProvider>
         <Menu />
-
         <Route path="/:word">
           <AnimatePresence exitBeforeEnter>
             <Listener />
@@ -27,6 +27,7 @@ const App = () => {
           <WordList />
         </Route>
       </WordProvider>
+      <Footer />
     </BrowserRouter>
   );
 };

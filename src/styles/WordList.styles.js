@@ -8,11 +8,16 @@ export const WordListWrapper = styled.ul`
   background-color: darkgreen;
   overflow: hidden;
 
-  h1 {
+  h1,
+  h4 {
     position: relative;
     z-index: 1;
     margin-bottom: 8rem;
     color: white;
+
+    span {
+      color: white;
+    }
   }
 
   &::after {
