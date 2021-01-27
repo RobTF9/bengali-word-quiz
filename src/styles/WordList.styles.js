@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const WordListWrapper = styled.ul`
-  padding: 8rem 0 24rem;
+  padding: 16rem 0 24rem;
   position: relative;
   width: 100%;
   text-align: center;
@@ -40,11 +40,26 @@ export const WordListGrid = styled.div`
 
 export const WordListItem = styled.li`
   position: relative;
-  background-color: white;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  background-color: #2b78f6;
+  box-shadow: inset 0 -0.4rem rgba(0, 0, 0, 0.2),
+    inset 0 0.2rem 0.2rem 0 rgba(255, 255, 255, 0.4);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 2rem;
+  min-height: 10rem;
   border-radius: 1rem;
   transition: all 0.3s ease-in-out;
+
+  svg {
+    stroke: white;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 2rem;
+    height: 2rem;
+  }
 
   ${({ active }) =>
     active &&
@@ -63,6 +78,8 @@ export const WordListItem = styled.li`
     answered &&
     css`
       background-color: green;
-      color: white;
+      border: 0.1rem lightgreen solid;
+      pointer-events: none !important;
+      box-shadow: none;
     `}
 `;

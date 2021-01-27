@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiCheckCircle } from 'react-icons/fi';
 import { Link, useLocation } from 'react-router-dom';
 import WordContext from '../data/wordContext';
 import {
@@ -40,6 +41,7 @@ const WordItem = ({ answered, word, active, inactive }) => {
     <WordListItem {...{ answered, active, inactive }}>
       {english.replace(/-/g, ' ')}
       {answered && ` / ${pronounciation} / ${bengali}`}
+      {answered && <FiCheckCircle />}
     </WordListItem>
   );
 };

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const ListenerWrapper = styled(motion.div)`
-  background-color: red;
+  background-color: #2b78f6;
   bottom: 0;
   box-shadow: 0 -1rem 2rem rgba(0, 0, 0, 0.2);
   padding: 8rem 0;
