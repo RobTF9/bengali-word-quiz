@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const ListenerWrapper = styled(motion.div)`
@@ -8,7 +9,17 @@ export const ListenerWrapper = styled(motion.div)`
   padding: 8rem 0;
   position: fixed;
   width: 100vw;
-  z-index: 2;
+  z-index: 6;
+`;
+
+export const ListenerOverlay = styled(Link)`
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 `;
 
 export const ListenerInner = styled.div`

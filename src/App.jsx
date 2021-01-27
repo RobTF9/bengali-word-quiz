@@ -16,11 +16,13 @@ const App = () => {
       <Typography />
       <WordProvider>
         <Menu />
-        <AnimatePresence exitBeforeEnter>
-          <Route path="/:word">
+
+        <Route path="/:word">
+          <AnimatePresence exitBeforeEnter>
             <Listener />
-          </Route>
-        </AnimatePresence>
+          </AnimatePresence>
+        </Route>
+
         <Route path="/">
           <WordList />
         </Route>

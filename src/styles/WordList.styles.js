@@ -77,6 +77,7 @@ export const WordListItem = styled.li`
     inactive &&
     css`
       opacity: 0.4;
+      pointer-events: none !important;
     `}
 
     ${({ answered }) =>

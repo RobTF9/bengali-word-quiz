@@ -7,6 +7,7 @@ import {
   WordListWrapper,
   WordListGrid,
 } from '../styles/WordList.styles';
+import { ListenerOverlay } from '../styles/Listener.styles';
 
 const WordList = () => {
   const { pathname } = useLocation();
@@ -18,6 +19,7 @@ const WordList = () => {
     <WordListWrapper>
       <h1>Click on a word, then say it in Bengali</h1>
       <WordListGrid>
+        {pathname !== '/' && <ListenerOverlay to="/" />}
         {words.map((w) => (
           <WordItem
             {...{

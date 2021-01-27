@@ -52,9 +52,6 @@ const Listener = () => {
   return (
     word && (
       <>
-        <TranscriptDebugger>
-          Transcript: {transcript}
-        </TranscriptDebugger>
         <ListenerWrapper
           {...{
             layout: true,
@@ -79,6 +76,9 @@ const Listener = () => {
             <h1>
               {correct ? 'Well done!' : `Can you say ${bengali} ?`}
             </h1>
+            <p>
+              {transcript ? ` You're saying: ${transcript}` : '...'}{' '}
+            </p>
             {attempts > 3 && <p>It's pronounced {pronounciation}</p>}
           </ListenerInner>
         </ListenerWrapper>
