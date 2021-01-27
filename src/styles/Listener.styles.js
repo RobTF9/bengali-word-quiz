@@ -19,6 +19,8 @@ export const ListenerInner = styled.div`
 
 export const TranscriptDebugger = styled.div`
   background-color: black;
+  font-size: 1.8rem;
+  padding: 2rem;
   color: white;
   position: fixed;
   right: 0;

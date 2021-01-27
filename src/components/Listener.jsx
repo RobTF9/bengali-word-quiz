@@ -13,15 +13,21 @@ import {
 const Listener = () => {
   const { pathname } = useLocation();
   const history = useHistory();
-  const word = words.find((w) => w[2] === pathname.substring(1))[0];
+  const [bengali, pronounciation, english] = words.find(
+    (w) => w[2] === pathname.substring(1),
+  );
+
   const [correct, setCorrect] = React.useState(false);
+  const [attempts, setAttempts] = React.useState(0);
+
   const { listening, transcript } = useSpeechRecognition({
     commands: [
       {
-        command: word,
+        command: bengali,
         callback: () => setCorrect(true),
         matchInterim: true,
         isFuzzyMatch: true,
+        fuzzyMatchingThreshold: 0.2,
       },
     ],
   });
@@ -29,6 +35,7 @@ const Listener = () => {
   React.useEffect(() => {
     if (!listening && !correct) {
       void SpeechRecognition.startListening({ language: 'bn-BD' });
+      setAttempts(attempts + 1);
     } else if (correct) {
       void SpeechRecognition.stopListening();
       setTimeout(() => history.push('/'), 2000);
@@ -42,7 +49,10 @@ const Listener = () => {
       </TranscriptDebugger>
       <ListenerWrapper>
         <ListenerInner>
-          <h1>{correct ? 'Well done!' : `Say ${word}`}</h1>
+          <h1>
+            {correct ? 'Well done!' : `Can you say ${bengali} ?`}
+          </h1>
+          {attempts > 3 && <p>It's pronounced {pronounciation}</p>}
         </ListenerInner>
       </ListenerWrapper>
     </>
