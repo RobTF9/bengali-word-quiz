@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, useHistory, useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import SpeechRecognition, {
   useSpeechRecognition,
 } from 'react-speech-recognition';
@@ -7,25 +7,20 @@ import WordContext from '../data/wordContext';
 import {
   ListenerInner,
   ListenerWrapper,
-  TranscriptDebugger,
 } from '../styles/Listener.styles';
 
 const Listener = () => {
   const { pathname } = useLocation();
   const history = useHistory();
-
   const { words, correctAnswer } = React.useContext(WordContext);
-
   const word =
     words.length > 1
       ? words.find((w) => w[2] === pathname.substring(1))
       : ['', '', ''];
 
   const [bengali, pronounciation] = word;
-
   const [correct, setCorrect] = React.useState(false);
   const [attempts, setAttempts] = React.useState(0);
-
   const { listening, transcript } = useSpeechRecognition({
     commands: [
       {
