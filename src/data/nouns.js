@@ -41,4 +41,6 @@ export default [
   ['সন্ধ্যা', 'Shondhe', 'Evening'],
   ['রাত', 'Raat', 'Night'],
   ['বেলা', 'Bela', 'Time'],
+  ['গ্রীষ্ম', 'Grissho', 'Summer'],
+  ['শীত', 'Sheet', 'Winter'],
 ];
