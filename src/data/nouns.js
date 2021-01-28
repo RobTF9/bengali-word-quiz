@@ -43,4 +43,5 @@ export default [
   ['বেলা', 'Bela', 'Time'],
   ['গ্রীষ্ম', 'Grissho', 'Summer'],
   ['শীত', 'Sheet', 'Winter'],
+  ['বর্ষাকাল', 'Borshakal', 'Rainy-season'],
 ];

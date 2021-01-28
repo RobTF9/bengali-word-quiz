@@ -75,6 +75,13 @@ const Listener = () => {
               {transcript ? ` You're saying: ${transcript}` : '...'}{' '}
             </p>
             {attempts > 3 && <p>It's pronounced {pronounciation}</p>}
+            {bengali && (
+              <audio
+                controls
+                id="tts-audio"
+                src={`https://translate.google.com/translate_tts?ie=UTF-8&tl=bn-BD&client=tw-ob&q=${bengali}`}
+              />
+            )}
           </ListenerInner>
         </ListenerWrapper>
       </>
