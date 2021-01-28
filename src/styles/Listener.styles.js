@@ -31,6 +31,16 @@ export const ListenerInner = styled.div`
   * {
     color: white;
   }
+
+  button {
+    width: 4rem;
+    height: 4rem;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
 `;
 
 export const TranscriptDebugger = styled.div`

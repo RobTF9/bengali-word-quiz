@@ -8,6 +8,7 @@ import {
   ListenerInner,
   ListenerWrapper,
 } from '../styles/Listener.styles';
+import { FiPlayCircle } from 'react-icons/fi';
 
 const Listener = () => {
   const { pathname } = useLocation();
@@ -32,6 +33,9 @@ const Listener = () => {
       },
     ],
   });
+
+  const audioEl = React.useRef();
+  const play = () => audioEl.current.play();
 
   React.useEffect(() => {
     if (!listening && !correct) {
@@ -77,10 +81,15 @@ const Listener = () => {
             {attempts > 3 && <p>It's pronounced {pronounciation}</p>}
             {bengali && (
               <audio
-                controls
+                ref={audioEl}
                 id="tts-audio"
-                src={`https://translate.google.com/translate_tts?ie=UTF-8&tl=bn-BD&client=tw-ob&q=${bengali}`}
+                src={`https://translate.google.com/translate_tts?ie=UTF-8&tl=bn-IN&client=tw-ob&q=${bengali}`}
               />
+            )}
+            {audioEl && (
+              <button onClick={play}>
+                <FiPlayCircle />
+              </button>
             )}
           </ListenerInner>
         </ListenerWrapper>
