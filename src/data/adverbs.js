@@ -12,4 +12,13 @@ export default [
   ['আজ', 'Aj', 'Today'],
   ['আসছে', 'Ase', "It's-there"],
   ['মাঝে মাঝে', 'Majhe majhe', 'Sometimes'],
+  ['একসাথে', 'Ekshate', 'Together'],
+  ['কেন', 'Keno', 'Why'],
+  ['এখানে', 'Ekhane', 'Here'],
+  ['পছন্দ', 'Pochondo', 'Like'],
+  ['কাল', 'Kal', 'Tomorrow-or-yesterday'],
+  ['একরকম', 'Ekirokom', 'Same'],
+  ['এখন', 'Ekhon', 'Now'],
+  ['বাইরের', 'Baire', 'Outside'],
+  ['সারাদিন', 'Sharadin', 'All-day'],
 ];

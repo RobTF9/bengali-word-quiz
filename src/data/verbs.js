@@ -1,6 +1,15 @@
 export default [
   ['লাগে', 'Lage', 'Takes'],
   ['যাও', 'Jai', 'I-go'],
-  ['পছন্দ', 'Pochondo', 'Like'],
   ['ওঠা', 'Utha', 'To-rise'],
+  ['থাকি', 'Thaki', 'Live'],
+  ['খেলতে', 'Khelte', 'To-play'],
+  ['দেখতে', 'Dehkte', 'To-watch'],
+  ['কর', 'Koro', 'To-do'],
+  ['হাটতে', 'Hatle', 'To-walk'],
+  ['ভালোবাসি', 'Bhalobashi', 'I-love'],
+  ['পড়া', 'Pora', 'To-fall'],
+  ['উঠে', 'Uthi', 'Get-up'],
+  ['শুরু', 'Shuru', 'Start'],
+  ['শেষ', 'Sheesh', 'Finish'],
 ];

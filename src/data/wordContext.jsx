@@ -7,6 +7,7 @@ import determiners from './determiners';
 import exclamations from './exclamations';
 import nouns from './nouns';
 import pronouns from './pronouns';
+import prepositions from './preposition';
 import verbs from './verbs';
 
 const WordContext = React.createContext();
@@ -21,6 +22,7 @@ export const WordProvider = ({ children }) => {
     nouns: true,
     pronouns: true,
     verbs: true,
+    prepositions: true,
   });
 
   const [words, setWords] = React.useState([]);
@@ -50,6 +52,9 @@ export const WordProvider = ({ children }) => {
     }
     if (config.verbs) {
       newArray = [...newArray, ...verbs];
+    }
+    if (config.prepositions) {
+      newArray = [...newArray, ...prepositions];
     }
     newArray = shuffle(newArray);
     setWords(newArray);
