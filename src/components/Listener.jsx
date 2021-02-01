@@ -29,13 +29,15 @@ const Listener = () => {
         callback: () => setCorrect(true),
         matchInterim: true,
         isFuzzyMatch: true,
-        fuzzyMatchingThreshold: 0.4,
+        fuzzyMatchingThreshold: 0.8,
       },
     ],
   });
 
   const audioEl = React.useRef();
-  const play = () => audioEl.current.play();
+  const play = () => {
+    audioEl.current.play();
+  };
 
   React.useEffect(() => {
     if (!listening && !correct) {

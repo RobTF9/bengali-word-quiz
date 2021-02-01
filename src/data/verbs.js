@@ -1,6 +1,6 @@
 export default [
   ['লাগে', 'Lage', 'Takes'],
-  ['যাও', 'Jai', 'I-go'],
+  ['যাও', 'Jao', 'I-go'],
   ['ওঠা', 'Utha', 'To-rise'],
   ['থাকি', 'Thaki', 'Live'],
   ['খেলতে', 'Khelte', 'To-play'],
